@@ -1,0 +1,41 @@
+<!-- templates/infection_status_list.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infection Status List</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .csv-container h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('about') }}">About</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+    </div>
+    <div class="container">
+        <h1>Infection Status List</h1>
+        <div class="map-container">
+            <h2>Map Visualization</h2>
+            <a href="{{ url_for('map_visualization') }}" class="button">Open Map Visualization</a>
+        </div>
+        <div class="csv-container">
+            <h2>TABULATED DATA</h2>
+            <div class="button-container">
+                <a href="{{ url_for('view_csv') }}" class="button">View CSV Contents</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

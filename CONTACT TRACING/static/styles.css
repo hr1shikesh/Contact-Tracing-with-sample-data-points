@@ -1,0 +1,79 @@
+/* static/styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.map-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.map-image {
+    max-width: 100%;
+}
+/* static/styles.css */
+
+/* Table Styles */
+.csv-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+.csv-table th, .csv-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.csv-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.csv-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.csv-table tbody tr:hover {
+    background-color: #ddd;
+}

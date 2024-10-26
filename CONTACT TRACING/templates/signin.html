@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sign In</h1>
+        <!-- Alert -->
+        <div id="alert" class="alert alert-danger alert-dismissible fade show" role="alert" style="display: none;">
+            Invalid parameter: <span id="error-param"></span>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <form action="{{ url_for('signin') }}" method="post">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="otp">OTP:</label>
+                <input type="text" id="otp" name="otp" required>
+            </div>
+            <button type="button" id="send-otp" class="btn btn-primary">Send OTP</button>
+            <button type="submit" class="btn btn-primary">Sign In</button>
+        </form>
+    </div>
+
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- Include Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Function to display the alert
+        function showAlert(param) {
+            $('#error-param').text(param);
+            $('#alert').fadeIn().delay(5000).fadeOut();
+        }
+
+        // Event listener for the "Send OTP" button
+        $('#send-otp').click(function() {
+            var username = $('#username').val();
+            var password = $('#password').val();
+            var otp = $('#otp').val();
+
+            if (!username || !password || !otp) {
+                showAlert("username, password, or OTP");
+            } else {
+                // Optional: You can add code here to send the OTP via AJAX
+                // If all parameters are valid
+                // Show the alert
+                $('#alert').removeClass('alert-danger').addClass('alert-info');
+                showAlert("OTP SENT. VALID FOR 60 SECONDS");
+            }
+        });
+    </script>
+</body>
+</html>
