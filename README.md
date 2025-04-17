@@ -30,3 +30,10 @@ A Flask-powered contact tracing system that uses geolocation data to identify po
 
 ## 📂 Project Structure
 
+📁 your-project/ │ ├── app.py # Main Flask application ├── templates/ │ ├── index.html # Home page with OTP flash message │ ├── results.html # Results display with map │ └── csvcontents.html # Rendered CSV contents ├── map_visualization.html # Generated interactive map ├── contact_tracing_results.csv # Output data of contact tracing ├── requirements.txt # Python dependencies └── README.md # Project overview
+
+![image](https://github.com/user-attachments/assets/cab4482c-931f-4770-a9f1-a243365bb03a)
+
+![image](https://github.com/user-attachments/assets/863ef305-c2d3-4793-9d69-9f51f7ad7255)
+
+![image](https://github.com/user-attachments/assets/41b14c7a-17a5-4581-9547-e0c52c0a6af0)
