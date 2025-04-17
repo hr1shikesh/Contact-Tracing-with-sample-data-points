@@ -1,0 +1,98 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: center; /* Center navbar items */
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 20px; /* Space between navbar links */
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto; /* Added margin for better spacing */
+  padding: 20px;
+  border-radius: 8px; /* Rounded corners for a modern look */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-right: 10px;
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth background transition */
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.map-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.map-image {
+  max-width: 100%;
+}
+
+/* Table Styles */
+.csv-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+  margin-top: 20px; /* Space above the table */
+}
+
+.csv-table th,
+.csv-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.csv-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.csv-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9; /* Slightly different shade for even rows */
+}
+
+.csv-table tbody tr:hover {
+  background-color: #ddd;
+}
+
+/* Button styles for CSV and Map links */
+.button {
+  background-color: #28a745; /* Green for secondary actions */
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Treat like a button */
+}
+
+.button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
